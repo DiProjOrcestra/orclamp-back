@@ -4,7 +4,7 @@ const routes = require('./routes');
 
 const app = express();
  
-mongoose.connect('mongodb+srv://<user>:<password>cluster0-31rvd.mongodb.net/orclamp?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://@cluster0-31rvd.mongodb.net/orclamp?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
