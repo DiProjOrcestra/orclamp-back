@@ -8,10 +8,13 @@ const ProjectSchema = new mongoose.Schema({
     image: String,
     owner: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'UserSchema'
+        ref: 'UserSchema',
+        required: true,
     },
     users: {
         type: [mongoose.Schema.Types.ObjectId],
         ref: 'UserSchema',
     },
 })
+
+module.exports = mongoose.model('Project', ProjectSchema);
